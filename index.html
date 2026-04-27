@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
 
 <head>
     <title>Project 2: A Clean Slate</title>
+    <link rel="stylesheet" href="styles/page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
         <div>
             <div>
                 <img src="images/avatar.png">
                 <b>Owen</b>
             </div>
-
             <menu>
                 <a href="https://owenwang5in.github.io/week1/school.html">week1</a>
                 <button id="color-mode-button">Light mode</button>
             </menu>
         </div>
     </header>
-
     <main>
         <h1>Project 2: A Clean Slate</h1>
         <p>
@@ -29,21 +35,43 @@
             a phone’s browser?
         </p>
         <h2><i>A poem</i></h2>
-        <p>
+        <p class="poem">
             A website is a work of art<br />
             A poem for the digital age<br />
             Built with skill and heart<br />
             To inspire while filling the page
         </p>
+        <h2>Counter</h2>
+        <div id="calculator">
+            <p id="counter">0</p>
+            <div id="calculator-buttons">
+                <button id="add-one-button">+1</button>
+                <button id="minus-one-button">-1</button>
+                <button id="clear-button">C</button>
+                </br>
+                <button id="one-button">1</button>
+                <button id="two-button">2</button>
+                <button id="three-button">3</button>
+                </br>
+                <button id="four-button">4</button>
+                <button id="five-button">5</button>
+                <button id="six-button">6</button>
+                </br>
+                <button id="seven-button">7</button>
+                <button id="eight-button">8</button>
+                <button id="nine-button">9</button>
+                </br>
+                <button id="zero-button">0</button>
+            </div>
+        </div>
     </main>
-
-    <footer>
+    <footer class="center">
         <div>
             <p>4/9/2026</p>
         </div>
     </footer>
-
-    <script></script>
+    <script src="scripts/color-mode.js"></script>
+    <script src="scripts/counter.js"></script>
 </body>
 
 </html>
