@@ -4,18 +4,14 @@
 
 body {
   padding: 20px;
-  color: white;
   background-color: black;
+  color: white;
   font-family: "Gaegu", sans-serif;
 }
 
-h1 {
-  font-family: "Bytesized", sans-serif;
-}
-
 .light-mode {
-  color: black;
   background-color: white;
+  color: black;
 }
 
 .center {
@@ -30,35 +26,47 @@ h1 {
   text-align: center;
 }
 
-#calculator {
-  background-color: blue;
-
-  max-width: 119px;
-}
-
-#calculator-buttons {
-  background-color: rgb(85, 85, 255);
-
-  max-width: 119px;
-}
-
-#counter {
-  background-color: rgb(170, 170, 255);
-
-  max-width: 119px;
-}
-
-button {
-  min-width: 35px;
-  max-width: 110px;
+footer {
+  background-image: linear-gradient(to bottom, rgb(170, 170, 255), rgb(85, 85, 255));
+  color: white;
 }
 
 .light-mode footer {
-  color: white;
   background-image: linear-gradient(to bottom, rgb(170, 170, 255), blue);
+  color: white;
 }
 
-.dark-mode footer {
-  color: white;
-  background-image: linear-gradient(to bottom, rgb(170, 170, 255), rgb(85, 85, 255));
+h1 {
+  font-family: "Bytesized", sans-serif;
+}
+
+#calculator {
+  max-width: 200px;
+  min-height: 255px;
+  border: 3px solid rgb(85, 85, 85);
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, black, rgb(85, 85, 85));
+  text-align: center;
+}
+
+#counter {
+  max-width: 170px;
+  max-height: 30px;
+  padding: 5px 0px 5px 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+
+#calculator-buttons button {
+  min-width: 35px;
+  min-height: 35px;
+  border: 0px;
+  border-radius: 35px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: rgb(170, 170, 255);
 }
