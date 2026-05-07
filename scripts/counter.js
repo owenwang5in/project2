@@ -4,6 +4,8 @@ let number = 0;
 let memory = 0;
 let plusMemory = false;
 let minusMemory = false;
+let multiplyMemory = false;
+let divideMemory = false;
 let plusOneButton = document.getElementById("plus-one-button");
 let minusOneButton = document.getElementById("minus-one-button");
 let clearButton = document.getElementById("clear-button");
@@ -22,6 +24,7 @@ let minusButton = document.getElementById("minus-button");
 let multiplyButton = document.getElementById("multiply-button");
 let divideButton = document.getElementById("divide-button");
 let equalButton = document.getElementById("equal-button");
+let doubleZeroButton = document.getElementById("double-zero-button");
 
 // functions
 function show(number) {
@@ -45,7 +48,7 @@ function clear() {
 }
 
 function zero() {
-    number = number * 10 + 0;
+    number = number * 10;
     show(number);
 }
 
@@ -106,17 +109,47 @@ function minus() {
     minusMemory = true;
 }
 
+function multiply() {
+    memory = number;
+    number = 0;
+    multiplyMemory = true;
+}
+
+function divide() {
+    memory = number;
+    number = 0;
+    divideMemory = true;
+}
+
 function equal() {
     if (plusMemory === true) {
         number = number + memory;
         plusMemory = false;
         show(number);
     }
+
     if (minusMemory === true) {
         number = memory - number;
         minusMemory = false;
         show(number);
     }
+
+    if (multiplyMemory === true) {
+        number = number * memory;
+        multiplyMemory = false;
+        show(number);
+    }
+
+    if (divideMemory === true) {
+        number = memory / number;
+        divideMemory = false;
+        show(number);
+    }
+}
+
+function doubleZero() {
+    number = number * 100;
+    show(number);
 }
 
 // event listeners
@@ -135,4 +168,7 @@ eightButton.addEventListener("click", eight);
 nineButton.addEventListener("click", nine);
 plusButton.addEventListener("click", plus);
 minusButton.addEventListener("click", minus);
+multiplyButton.addEventListener("click", multiply);
+divideButton.addEventListener("click", divide);
 equalButton.addEventListener("click", equal);
+doubleZeroButton.addEventListener("click", doubleZero);
